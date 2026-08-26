@@ -1,0 +1,6 @@
+{
+  "name": "PipNex Forex Bot",
+  "description": "Automated Forex Trading Bot authentication and customer onboarding portal with Google Auth, referral verification, and live bot dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

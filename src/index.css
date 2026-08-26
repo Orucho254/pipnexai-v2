@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #05060b;
+    --bg-card: #0c0e1a;
+    --bg-subtle: #121424;
+    --border-subtle: #1c223a;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --primary-accent: #7c3aed;
+  }
+
+  body {
+    background-color: #05060b;
+    color: #f8fafc;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  body.dark,
+  html.dark body {
+    background-color: #05060b !important;
+    color: #f8fafc !important;
+  }
+
+  /* Optional Light Mode Overrides */
+  body.light,
+  html.light body {
+    background-color: #f8fafc !important;
+    color: #0f172a !important;
+  }
+
+  body.light .bg-\[\#05060b\],
+  body.light .bg-\[\#05060a\],
+  body.light .bg-\[\#07080f\],
+  body.light .bg-\[\#080911\],
+  body.light .bg-\[\#090a14\],
+  body.light .bg-\[\#0c0e1a\],
+  body.light .bg-\[\#090b14\],
+  body.light .bg-\[\#0e1124\] {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+  }
+
+  body.light .text-white {
+    color: #0f172a !important;
+  }
+
+  body.light .text-gray-300,
+  body.light .text-gray-400 {
+    color: #64748b !important;
+  }
+
+  body.light [class*="border-[#1"],
+  body.light [class*="border-[#2"] {
+    border-color: #e2e8f0 !important;
+  }
+}
+
+/* Custom minimal dark scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #090b14;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #1e243e;
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2a3356;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
